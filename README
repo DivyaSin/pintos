@@ -1,0 +1,4 @@
+1. Install qemu.
+2. Add the pintos/bin folder to your $PATH.
+3. Go to threads/build and run pintos run alarm-multiple to check.
+4. pintos.tar.gz contains the original source code which was modified to get pintos running.

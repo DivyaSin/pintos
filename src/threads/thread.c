@@ -93,6 +93,7 @@ thread_init (void)
   list_init (&ready_list);
   list_init (&all_list);
 
+
   /* Set up a thread structure for the running thread. */
   initial_thread = running_thread ();
   init_thread (initial_thread, "main", PRI_DEFAULT);
@@ -468,6 +469,7 @@ init_thread (struct thread *t, const char *name, int priority)
   strlcpy (t->name, name, sizeof t->name);
   t->stack = (uint8_t *) t + PGSIZE;
   t->priority = priority;
+  t->sleep_time = 0;
   t->magic = THREAD_MAGIC;
   list_push_back (&all_list, &t->allelem);
 }
